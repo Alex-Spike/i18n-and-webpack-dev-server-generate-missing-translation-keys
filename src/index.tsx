@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './locales/i18n';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <React.Suspense fallback="loading">
+      <App />
+    </React.Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );
